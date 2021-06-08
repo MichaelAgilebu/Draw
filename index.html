@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
-    <title>HTML Starter</title>
-    <base href="./">
+    <title>Hello World</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/css/main.css" type="text/css">
-    <link href="favicon.ico" rel="icon" type="image/x-icon" />
-  </head>
-  <body>
-    <h1>HTML Starter</h1>
-    <script src="dist/js/main.js"></script>
-  </body>
+</head>
+
+<body>
+
+    <canvas id="canvas" height="600px" width="800px"></canvas>
+
+    <script>
+
+        //Plot a random x
+        var x = Math.random() * 700;
+
+        //Plot a random y
+        var y = Math.random() * 500;
+
+        //Initialize the canvas
+        var canvas = document.getElementById('canvas');
+
+        //create a context
+        var ctx = canvas.getContext('2d');
+
+        //Create a random color
+        ctx.fillStyle = '#' + Math.floor(Math.random() * 16777215).toString(16);
+
+        //Create the rectangle
+        ctx.fillRect(x, y, 100, 100);
+
+    </script>
+</body>
+
 </html>
